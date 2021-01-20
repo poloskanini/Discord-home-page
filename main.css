@@ -23,10 +23,6 @@ body {
   font-family: var(--main-font-family-light);
 }
 
-a {
-  text-decoration: none;
-  display: inline-block;
-}
 
 img {
   max-width: 100%;
@@ -51,9 +47,32 @@ img {
   width: 12.4rem;
 }
 
-.nav-list {
-  display: none;
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.nav-list {
+  display: inline-flex;
+  color: var(--off-white-clr);
+}
+
+.nav-list li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--off-white-clr);
+  margin: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
 
 .nav-items-right {
   display: flex;
@@ -107,8 +126,12 @@ img {
 }
 
 .hero-content-wrap {
-  grid-column: span var(--num-of-grid-columns);
+  grid-column: 2 / 4;
   color: var(--light-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -125,6 +148,10 @@ img {
   line-height: 3.2rem;
 }
 
+.hero-btn-group {
+  grid-column: 2 / 4;
+}
+
 .hero-btn-group .btn-light {
   margin: 2.4rem 2.4rem 0 0;
   display: inline-flex;
@@ -133,6 +160,11 @@ img {
 .hero-btn-group .btn-light i {
   align-self: center;
   margin-right: .8rem;
+}
+
+.btn {
+  width: 210px;
+  text-align: center;
 }
 
 .btn-large {
@@ -149,3 +181,30 @@ img {
 .btn-dark:hover {
   background-color: #36393f;
 }
+
+/* COLLABORATION */
+
+.row-collab {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 4rem;
+}
+.grid-image {
+  margin-top: 2.4rem;
+  grid-column: 4 / 8;
+}
+
+.secondary-title {
+  font-size: var(--secondary-title-font-size);
+}
+
+.text-group {
+  grid-column: 8 / 10;
+}
+
+.text-group p {
+  margin-top: 2rem;
+  line-height: 3.2rem;
+  text-align: justify;
+}
+
